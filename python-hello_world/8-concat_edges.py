@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-str1 = "Holberton"
-str2 = "School"
-print(str.__add__(str.__class__.__name__[0]+str.__class__.__name__[1]+str.__class__.__name__[2]+str.__class__.__name__[3]+"-oriented programming with Python",""))
+str = "Python is an interpreted, interactive, object-oriented programming\
+         language that combines remarkable power with very clear syntax"
+str = str[39:67] + str[107:112] + str[:6]
+print(str)
