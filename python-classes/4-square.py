@@ -1,18 +1,48 @@
+#!/usr/bin/python3
+"""Module that defines a Square class with getter and setter"""
+
+
 class Square:
+    """Class that defines a square by its size with getter and setter"""
+
     def __init__(self, size=0):
+        """Initialize a new Square instance
+
+        Args:
+            size (int): size of the square, defaults to 0
+        """
         self.size = size
 
     @property
     def size(self):
+        """Retrieve the size of the square
+
+        Returns:
+            int: size of the square
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        if type(value) is not int:
+        """Set the size of the square
+
+        Args:
+            value (int): size of the square
+
+        Raises:
+            TypeError: if value is not an integer
+            ValueError: if value is less than 0
+        """
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
     def area(self):
-            return self.__size * self.__size
+        """Return the current area of the square
+
+        Returns:
+            int: area of the square
+        """
+        return self.__size ** 2
